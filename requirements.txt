@@ -1,0 +1,5 @@
+torch
+opencv-python
+yacs
+tqdm
+tensorboardX
