@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-This is the official repository for BEVANet (ICIP 2025 spotlight). ([arXiv](https://arxiv.org/abs/2508.07300) [IEEE]https://ieeexplore.ieee.org/document/11084676）
+This is the official repository for BEVANet (ICIP 2025 spotlight). ([arXiv](https://arxiv.org/abs/2508.07300) [IEEE](https://ieeexplore.ieee.org/document/11084676))
 
 ## Highlights
 <p align="center">
@@ -133,3 +133,4 @@ python tools/custom.py --cfg configs/cityscapes/BEVANet.yaml --p 'checkpoint/cit
 
 
 * Our implementation is modified based on [PIDNet](https://github.com/XuJiacong/PIDNet).
+
