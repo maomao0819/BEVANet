@@ -1,8 +1,11 @@
 # BEVANet: Bilateral Efficient Visual Attention Network for Real-time Semantic Segmentation
 
+[![arXiv paper](https://img.shields.io/badge/arXiv%20paper-2508.07300-red.svg?logo=arXiv)](https://arxiv.org/abs/2508.07300)
+[![ICIP paper](https://img.shields.io/badge/IEEE%20paper-ICIP25%20spotlight-blue.svg?logo=IEEE)](https://ieeexplore.ieee.org/document/11084676)
+[![🤗 Hugging Face](https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Model&color=yellow)](https://huggingface.co/maomao0819/BEVANet)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-This is the official repository for BEVANet (ICIP 2025 spotlight). ([arXiv](https://arxiv.org/abs/2508.07300) [IEEE](https://ieeexplore.ieee.org/document/11084676))
+This is the official repository for BEVANet (ICIP 2025 spotlight).
 
 ## Highlights
 <p align="center">
