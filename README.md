@@ -125,7 +125,7 @@ python models/speed/BEVANet_speed.py --cfg configs/camvid/BEVANet_S.yaml --c 11 
 ### 5. Custom Inputs
 
 
-* Place all your images in the `samples/` directory, then run the following command using the Cityscapes pretrained PIDNet-L model for .png image format:
+* Place all your images in the `samples/` directory, then run the following command using the Cityscapes pretrained BEVANet model for .png image format:
 ````bash
 python tools/custom.py --cfg configs/cityscapes/BEVANet.yaml --p 'checkpoint/cityscapes/BEVANet_VAL_Cityscapes.pt' --t '.png'
 ````
