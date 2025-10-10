@@ -7,13 +7,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 import time
 from .model_utils import BasicBlock, Bottleneck, segmenthead
-from .FB import Bag
+from .FB import BGAF
 import logging
 from .__init__ import module_dict
 from .EVAN import EVAN
-from .LSKA import LSKA, SDLSKA
+from .LSKA import SDLSKA
 from .conv import DWConv, PWConv
-from .PPM import DAPPM
+from .PPM import DLKPPM
 from .FS import PagFM
 from utils.utils import calculate_FPS
 
@@ -24,7 +24,7 @@ algc = False
 class BEVANet_backbone(nn.Module):
     def __init__(
         self,
-        lka=LSKA,
+        lka=SDLSKA,
         dwconv=DWConv,
         pwconv=PWConv,
         semantic_kernel_size=[0, 35, 35],
@@ -354,8 +354,8 @@ class BEVANet_SEG(BEVANet_backbone):
         lka=SDLSKA,
         dwconv=DWConv,
         pwconv=PWConv,
-        ppm=DAPPM,
-        fb=Bag,
+        ppm=DLKPPM,
+        fb=BGAF,
         semantic_kernel_size=[35, 35, 35],
         detail_kernel_size=[23, 23],
         mlp_expand=[4, 4],
