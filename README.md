@@ -60,8 +60,8 @@ This implementation is adapted by [PIDNet](https://github.com/XuJiacong/PIDNet).
 
 ### 0. Prepare the dataset
 
-* (Optional) Download the [ImageNet](https://image-net.org/download.php) dataset and unzip it into `data/ImageNet` directory.
-* Download the [Cityscapes](https://www.cityscapes-dataset.com/), [CamVid](http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/), and [ADE20k](https://ade20k.csail.mit.edu/) datasets, extracting them to `data/cityscapes`, `data/camvid`, and `data/ade20k` dirs, respectively.
+* (Optional) Download the [ImageNet](https://image-net.org/download.php) dataset and unzip it into `data/imagenet` directory.
+* Download the [Cityscapes](https://www.cityscapes-dataset.com/), [CamVid](http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/), and [ADE20k](https://ade20k.csail.mit.edu/) datasets, extracting them to `data/cityscapes`, `data/camvid`, and `data/ade20k` directories, respectively.
 * Ensure that the file paths listed in `data/list` correctly correspond to the dataset images.
 
 ### 1. Pretraining (Optional)
@@ -72,7 +72,7 @@ python tools/pretrain.py --cfg configs/cityscapes/BEVANet.yaml
 
 ### 2. Training
 
-* Pretrain with step 1. or download the ImageNet pretrained models and put them into `pretrained_models/ImageNet/` directory.
+* Pretrain with step 1. or download the ImageNet pretrained models and put them into `pretrained_models/imagenet/` directory.
 * For example, finetune the BEVANet on Cityscapes:
 ````bash
 python tools/train.py --cfg configs/cityscapes/BEVANet.yaml MODEL.PRETRAINED pretrained_models/imagenet/BEVANet_ImageNet.pth
@@ -88,7 +88,7 @@ python tools/train.py --cfg configs/cityscapes/BEVANet_trainval.yaml GPUS (0,1,2
 
 ### 3. Evaluation
 
-* Download the finetuned models for Cityscapes, CamVid, and ADE20k and put them into `checkpoint/cityscapes/`, `checkpoint/ADE20k/`, `checkpoint/COCO/` and `checkpoint/camvid/` directories, respectively.
+* Download the finetuned models for Cityscapes, CamVid, and ADE20k and put them into `checkpoint/cityscapes/`, `checkpoint/camvid/`, and `checkpoint/ade20k/` directories, respectively.
 * For example, evaluate the BEVANet on Cityscapes val set:
 ````bash
 python tools/eval.py --cfg configs/cityscapes/BEVANet.yaml \
@@ -134,6 +134,5 @@ python tools/custom.py --cfg configs/cityscapes/BEVANet.yaml --p 'checkpoint/cit
 ````
 ## Acknowledgement
 
-
 * Our implementation is modified based on [PIDNet](https://github.com/XuJiacong/PIDNet).
-
+* Thanks for their nice contribution.
